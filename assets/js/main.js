@@ -8,7 +8,10 @@
 
 */
 
+//MAIL
+
 //Chiedo la propria Mail
+document.querySelector(".mainTitle").innerHTML = ("Fammi controllare se puoi Accedere.")
 let userMail = prompt("Qual è la tua E-Mail?");
 
 //Inserisco la Mail nella Lista d'accesso
@@ -20,10 +23,14 @@ for (i = 0; i < mailList.length; i++) {
     //Controllo se la Mail dell'Utente c'è o meno
     if (mailList.indexOf(userMail) !== -1) {
         //Se c'è, gli dico che c'è
-        console.log("La tua Mail c'è, puoi entrare.")
+        document.querySelector(".mainTitle").innerHTML = ("La tua Mail c'è, puoi entrare.")
     } else {
         //Se non la trovo, gli comunico che non c'è
-        console.log("La tua Mail non c'è.")
+        document.querySelector(".mainTitle").innerHTML = ("La tua Mail non c'è, non puoi entrare.")
     }
 
 }
+
+//DADI
+
+//Genero il numero sia per il Giocatore che per il Pc
