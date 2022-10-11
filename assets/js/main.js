@@ -11,26 +11,24 @@
 //MAIL
 
 //Chiedo la propria Mail
-document.querySelector(".mainTitle").innerHTML = ("Fammi controllare se puoi Accedere.")
-let userMail = prompt("Qual è la tua E-Mail?");
-console.log("La Mail dell'Utente è: " + userMail)
+let  userMail = prompt("Mi dai la tua Mail?");
 
-//Inserisco la Mail nella Lista d'accesso
-let mailList = ["mario.rossi@gmail.com", "antonio.luigi@libero.it", userMail];
-console.log("La Lista delle Mail è: " + userMail);
+const accessMail = [
+    "manuelgaleone@gmail.com",
+    "antoniocassano@gmail.com",
+    "galeonemanuel@gmail.com",
+    "manuelboolean@gmail.com"
+    ];
 
-//Analizzo la Mail List
-for (i = 0; i < mailList.length; i++) {
+let isValid = false;
 
-    //Controllo se la Mail dell'Utente c'è o meno
-    if (mailList.indexOf(userMail) !== -1) {
-        //Se c'è, gli dico che c'è
-        document.querySelector(".mainTitle").innerHTML = ("La tua Mail c'è, puoi entrare.");
-        console.log("La Mail c'è, puoi entrare.");
-    } else {
-        //Se non la trovo, gli comunico che non c'è
-        document.querySelector(".mainTitle").innerHTML = ("La tua Mail non c'è, non puoi entrare.");
-        console.log("La tua Mail non c'è, non puoi entrare.");
+for (let i = 0; i < accessMail.length; i++) {
+    const element = accessMail [i];
+
+    if (userMail === element) {
+        isValid = true;
+        console.log(isValid);
+        document.querySelector(".mainTitle").innerHTML = ("Mail accettata: Benvenuto!");
     }
 
 }
